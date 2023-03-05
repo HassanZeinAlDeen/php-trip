@@ -6,7 +6,6 @@ $query = $mysqli->prepare('SELECT `Email`, `Password` FROM user where Id=?');
 $query->bind_param('i', $user_id);
 $query->execute();
 $query->store_result();
-$hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
 $response ="";
 
